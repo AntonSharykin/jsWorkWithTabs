@@ -85,4 +85,30 @@ let more = document.querySelector('.more'),
         more.classList.remove('more-splash');
         document.body.style.overflow='';
     });
+
+  class Options{
+      constructor(height=50, width=50, bg='#fff', fontSize=14, textAlign='center'){
+        this.height=height;
+        this.width=width;
+        this.background=bg;
+        this.fontSize=fontSize;
+        this.textAlign=textAlign;
+      }
+
+      createDiv(){
+          var optDiv=document.createElement('div');
+          
+          optDiv.style.width=this.width+"px";
+          optDiv.style.height=this.height+"px";
+          optDiv.style.background=this.background;
+          optDiv.style.fontSize=this.fontSize;
+          optDiv.style.textAlign=this.textAlign;
+          optDiv.textContent="some text";  
+          document.body.appendChild(optDiv);
+      }
+  }
+  
+  let div = new Options();
+  div.createDiv();
+
 });
